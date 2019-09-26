@@ -1,6 +1,6 @@
 # Physical 
--We need to make a physical prototype to see how the product will work.
--The protoype should have something rantagular held by two pegs and move the begs up and down to see how the rectangle (ramp) will react to the motion
+- We need to make a physical prototype to see how the product will work.
+- The protoype should have something rantagular held by two pegs and move the begs up and down to see how the rectangle (ramp) will react to the motion
 - After collecting the data and taking pictures or videos implements discover to the game. 
 
 # What button should it be?
