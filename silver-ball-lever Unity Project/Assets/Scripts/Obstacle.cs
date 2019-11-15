@@ -18,8 +18,8 @@ public class Obstacle : MonoBehaviour
         if (collision.tag == "Player")
         {
             GameOverText.SetActive(true); //tells us we win
-
-            audioSource.Play();
+            GameOver.isGameOver = true;
+            
 
             Debug.Log("You touched the bad object");
         }

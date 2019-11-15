@@ -18,7 +18,7 @@ public class Goal : MonoBehaviour
     {
         Debug.Log("Touched Trigger");
 
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && !GameOver.isGameOver)
         {
             WinText.SetActive(true); //tells us we win
 

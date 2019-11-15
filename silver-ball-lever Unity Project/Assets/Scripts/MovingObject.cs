@@ -26,7 +26,7 @@ public class MovingObject : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        
+        if (!GameOver.isGameOver)
         rigidbody.velocity = new Vector2(0, verticalInput + moveSpeed);
 
 
