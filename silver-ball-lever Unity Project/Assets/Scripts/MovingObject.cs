@@ -5,10 +5,10 @@ using UnityEngine;
 public class MovingObject : MonoBehaviour
 {
 
-    public float moveSpeed = 20f;
+    public float moveSpeed = 1f;
     private Rigidbody2D rigidbody;
     private float verticalInput;
-    public string InputAxis;
+    public string inputAxis;
 
     // Start is called before the first frame update
     void Start()
@@ -22,12 +22,12 @@ public class MovingObject : MonoBehaviour
    * physics stuff */
     private void Update()
     {
-        verticalInput = Input.GetAxis(InputAxis);
+        verticalInput = Input.GetAxis(inputAxis);
     }
     private void FixedUpdate()
     {
         if (!GameOver.isGameOver)
-        rigidbody.velocity = new Vector2(0, verticalInput + moveSpeed);
+        rigidbody.velocity = new Vector2(0, verticalInput * moveSpeed);
 
 
     }
