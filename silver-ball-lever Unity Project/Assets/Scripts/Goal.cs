@@ -10,6 +10,10 @@ public class Goal : MonoBehaviour
 
     public GameObject WinText;
     private AudioSource audioSource;
+    public GameObject Player;
+    public GameObject Ramp;
+    public GameObject LeftSupport;
+    public GameObject RightSupport;
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -21,6 +25,10 @@ public class Goal : MonoBehaviour
         if (collision.tag == "Player" && !GameOver.isGameOver)
         {
             WinText.SetActive(true); //tells us we win
+            Player.SetActive(false);
+            Ramp.SetActive(false);
+            LeftSupport.SetActive(false);
+            RightSupport.SetActive(false);
 
             audioSource.Play();
 

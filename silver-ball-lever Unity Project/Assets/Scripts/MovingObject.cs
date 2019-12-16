@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class MovingObject : MonoBehaviour
 {
 
@@ -14,7 +14,7 @@ public class MovingObject : MonoBehaviour
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
-        
+
     }
 
     /*use fixed update for physics code to be careful
@@ -23,12 +23,24 @@ public class MovingObject : MonoBehaviour
     private void Update()
     {
         verticalInput = Input.GetAxis(inputAxis);
+
+
     }
     private void FixedUpdate()
     {
         if (!GameOver.isGameOver)
-        rigidbody.velocity = new Vector2(0, verticalInput * moveSpeed);
+        {
+            rigidbody.velocity = new Vector2(0, verticalInput * moveSpeed);
+        }
+        else
+        {
+            rigidbody.velocity = new Vector2(0, verticalInput * moveSpeed);
+        }
+    
+        
 
 
     }
 }
+
+    
